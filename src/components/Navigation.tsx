@@ -7,11 +7,11 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "About", href: "#about" },
-    { label: "Vision", href: "#vision" },
-    { label: "Values", href: "#values" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/#about" },
+    { label: "Vision", href: "/#vision" },
+    { label: "Services", href: "/#services" },
+    { label: "Contact", href: "/contact" },
   ];
 
   useEffect(() => {
@@ -22,9 +22,18 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+  const handleNavigation = (href: string) => {
+    if (href.startsWith('/#')) {
+      const id = href.substring(2);
+      if (window.location.pathname !== '/') {
+        window.location.href = href;
+      } else {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = href;
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -51,13 +60,12 @@ const Navigation = () => {
               E.B.I
             </button>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-1">
               {navItems.map((item) => (
                 <Button
                   key={item.href}
                   variant="ghost"
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item.href)}
                   className="text-foreground hover:text-primary hover:bg-muted"
                 >
                   {item.label}
@@ -95,7 +103,7 @@ const Navigation = () => {
                 <Button
                   key={item.href}
                   variant="ghost"
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item.href)}
                   className="justify-start text-foreground hover:text-primary hover:bg-muted"
                 >
                   {item.label}

@@ -11,6 +11,9 @@ import {
   HardHat,
   ShieldCheck,
 } from "lucide-react";
+import medicalImage from "@/assets/medical-supplies.jpg";
+import constructionImage from "@/assets/construction-materials.jpg";
+import itImage from "@/assets/it-equipment.jpg";
 
 const Services = () => {
   const services = [
@@ -105,7 +108,51 @@ const Services = () => {
             })}
           </div>
 
-          <Card className="bg-gradient-hero border-0 shadow-elevated">
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <Card className="overflow-hidden border-border hover:shadow-elevated transition-all duration-300">
+              <div className="relative h-48">
+                <img src={medicalImage} alt="Medical Supplies" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-hero opacity-20" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">Medical Excellence</h3>
+                <p className="text-muted-foreground">
+                  Comprehensive medical supplies including hospital equipment, pharmaceuticals, 
+                  and surgical tools from trusted manufacturers.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden border-border hover:shadow-elevated transition-all duration-300">
+              <div className="relative h-48">
+                <img src={constructionImage} alt="Construction Materials" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-hero opacity-20" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">Construction Solutions</h3>
+                <p className="text-muted-foreground">
+                  Quality building materials from cement and steel to roofing sheets 
+                  and plumbing fixtures for all your projects.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden border-border hover:shadow-elevated transition-all duration-300">
+              <div className="relative h-48">
+                <img src={itImage} alt="IT Equipment" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-hero opacity-20" />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">Technology Infrastructure</h3>
+                <p className="text-muted-foreground">
+                  Complete IT solutions including computers, servers, networking devices, 
+                  and support equipment for modern businesses.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="bg-gradient-hero border-0 shadow-elevated mt-8">
             <CardContent className="p-8 text-center text-primary-foreground">
               <h3 className="text-2xl font-bold mb-3">Technical Capabilities</h3>
               <p className="text-lg opacity-95 leading-relaxed max-w-4xl mx-auto">

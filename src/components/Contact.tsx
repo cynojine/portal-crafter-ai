@@ -1,45 +1,41 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Building2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Location",
+      title: "Visit Us",
       details: ["Shop No. 3 Kamwala", "Lusaka - Zambia"],
     },
     {
       icon: Phone,
-      title: "Phone",
+      title: "Call Us",
       details: ["(+260) 972 902432", "(+260) 963 412804"],
     },
     {
       icon: Mail,
-      title: "Email",
+      title: "Email Us",
       details: ["evenbetterinvestments@gmail.com"],
-    },
-    {
-      icon: Building2,
-      title: "Bank",
-      details: ["First National Bank (FNB)", "Account: 63034979592"],
     },
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Contact Us
+              Let's Connect
             </h2>
             <div className="w-24 h-1 bg-gradient-accent mx-auto rounded-full" />
-            <p className="text-lg text-muted-foreground">
-              Get in touch with our team for all your procurement and supply needs
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Have questions about our services? Our team is ready to help you find the perfect procurement solutions.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
@@ -65,24 +61,16 @@ const Contact = () => {
             })}
           </div>
 
-          <Card className="bg-gradient-accent border-0 shadow-elevated">
-            <CardContent className="p-8 text-center text-secondary-foreground">
-              <h3 className="text-2xl font-bold mb-3">
-                Registration Details
-              </h3>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-lg">
-                <div>
-                  <p className="font-semibold">Company Registration:</p>
-                  <p className="opacity-90">120220043201</p>
-                </div>
-                <div className="hidden sm:block w-px h-12 bg-secondary-foreground/20" />
-                <div>
-                  <p className="font-semibold">TPIN:</p>
-                  <p className="opacity-90">2000826899</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="text-center">
+            <Button 
+              size="lg"
+              className="text-lg px-8"
+              onClick={() => window.location.href = '/contact'}
+            >
+              View Full Contact Information
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>
