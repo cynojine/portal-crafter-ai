@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,9 +56,9 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16">
             <button
               onClick={scrollToTop}
-              className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
-              E.B.I
+              <img src={logo} alt="E.B.I Logo" className="h-12 w-auto" />
             </button>
 
             <div className="hidden md:flex items-center gap-1">
