@@ -10,7 +10,7 @@ const ContactPage = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: ["Shop No. 3 Kamwala", "Lusaka - Zambia"],
+      details: ["Lusaka - Zambia"],
     },
     {
       icon: Phone,

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.jpg";
+import SearchDialog from "@/components/SearchDialog";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,9 +10,8 @@ const Navigation = () => {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/#about" },
-    { label: "Vision", href: "/#vision" },
-    { label: "Services", href: "/#services" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -68,21 +68,24 @@ const Navigation = () => {
                   {item.label}
                 </Button>
               ))}
+              <SearchDialog />
             </div>
 
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </Button>
+            {/* Mobile Menu Button and Search */}
+            <div className="flex items-center gap-2 md:hidden">
+              <SearchDialog />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                {isMobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
