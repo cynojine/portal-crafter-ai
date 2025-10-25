@@ -49,7 +49,7 @@ const Navigation = () => {
         className="fixed top-0 left-0 right-0 z-50 bg-background shadow-sm border-b"
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-[68px]">
             <button
               onClick={scrollToTop}
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
