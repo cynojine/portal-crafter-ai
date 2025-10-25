@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-logistics.jpg";
-import logo from "@/assets/logo.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -27,17 +26,13 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          <div className="space-y-6">
-            <div className="inline-block">
-              <img 
-                src={logo} 
-                alt="E.B.I - Even Better Initiatives Limited" 
-                className="h-48 md:h-64 w-auto mx-auto drop-shadow-2xl"
-              />
-            </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground/95">
+          <div className="space-y-4">
+            <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground">
               Even Better Initiatives Limited
-            </h2>
+            </h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/80 font-medium">
+              It only gets Better!
+            </p>
           </div>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
