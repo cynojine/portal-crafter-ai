@@ -25,39 +25,45 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          <div className="space-y-4">
-            <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground tracking-tight leading-tight animate-scale-in">
               Even Better Initiatives Limited
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/80 font-medium">
-              It only gets Better!
-            </p>
+            <div className="inline-block animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+              <p className="text-2xl md:text-3xl text-primary-foreground font-semibold bg-primary/20 px-6 py-3 rounded-full backdrop-blur-sm border border-primary-foreground/20">
+                It only gets Better!
+              </p>
+            </div>
           </div>
 
-          <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-primary-foreground/95 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
             Your trusted partner in procurement, logistics, and supply chain solutions across Southern and Central Africa
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
             <Button
               size="lg"
               variant="secondary"
-              className="text-lg px-8 py-6 shadow-elevated hover:scale-105 transition-transform"
+              className="text-lg px-10 py-7 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
               onClick={() => scrollToSection("services")}
             >
               Our Services
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="text-lg px-8 py-6 border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-elevated hover:scale-105 transition-transform"
+              className="text-lg px-10 py-7 border-2 border-primary-foreground/80 text-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
               onClick={() => window.location.href = '/contact'}
             >
               Contact Us
             </Button>
           </div>
+
+          {/* Floating elements for visual interest */}
+          <div className="absolute top-20 left-10 w-20 h-20 bg-primary-foreground/10 rounded-full blur-2xl animate-pulse" />
+          <div className="absolute bottom-40 right-10 w-32 h-32 bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
       </div>
 
