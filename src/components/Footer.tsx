@@ -68,13 +68,13 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary-light flex-shrink-0" />
-                <a href="mailto:info@ebi.co.zm" className="text-secondary-foreground/80 hover:text-primary-light transition-colors">
-                  info@ebi.co.zm
+                <a href="mailto:info@ebi-zm.com" className="text-secondary-foreground/80 hover:text-primary-light transition-colors">
+                  info@ebi-zm.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Globe className="h-4 w-4 text-primary-light flex-shrink-0" />
-                <span className="text-secondary-foreground/80">www.ebi.co.zm</span>
+                <span className="text-secondary-foreground/80">www.ebi-zm.com</span>
               </li>
             </ul>
           </div>

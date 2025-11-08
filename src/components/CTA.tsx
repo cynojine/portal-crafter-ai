@@ -51,7 +51,7 @@ const CTA = () => {
               <Mail className="h-6 w-6 text-primary-foreground" />
               <div className="text-left">
                 <p className="text-sm text-primary-foreground/80">Email us</p>
-                <p className="font-semibold text-primary-foreground">info@ebi.co.zm</p>
+                <p className="font-semibold text-primary-foreground">info@ebi-zm.com</p>
               </div>
             </div>
           </div>
