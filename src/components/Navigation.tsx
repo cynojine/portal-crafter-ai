@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 import SearchDialog from "@/components/SearchDialog";
 
 const Navigation = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -27,13 +29,17 @@ const Navigation = () => {
     if (href.startsWith('/#')) {
       const id = href.substring(2);
       if (window.location.pathname !== '/') {
-        window.location.href = href;
+        navigate('/');
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          element?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
       } else {
         const element = document.getElementById(id);
         element?.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      window.location.href = href;
+      navigate(href);
     }
     setIsMobileMenuOpen(false);
   };
