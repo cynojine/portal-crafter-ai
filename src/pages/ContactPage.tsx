@@ -34,7 +34,7 @@ const ContactPage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-16">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-[48px]">
         <div className="absolute inset-0">
           <img 
             src={contactHero} 

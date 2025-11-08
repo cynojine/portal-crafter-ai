@@ -2,6 +2,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Process from "@/components/Process";
+import FAQ from "@/components/FAQ";
 import logisticsHero from "@/assets/hero-logistics.jpg";
 
 const ServicesPage = () => {
@@ -10,7 +12,7 @@ const ServicesPage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-[68px]">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-[48px]">
         <div className="absolute inset-0">
           <img 
             src={logisticsHero} 
@@ -31,7 +33,9 @@ const ServicesPage = () => {
       </section>
 
       <Services />
+      <Process />
       <WhyChooseUs />
+      <FAQ />
       
       <Footer />
     </div>

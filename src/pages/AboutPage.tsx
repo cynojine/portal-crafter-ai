@@ -4,6 +4,8 @@ import About from "@/components/About";
 import VisionMission from "@/components/VisionMission";
 import Values from "@/components/Values";
 import Stats from "@/components/Stats";
+import Timeline from "@/components/Timeline";
+import Achievements from "@/components/Achievements";
 import teamImage from "@/assets/team-collaboration.jpg";
 
 const AboutPage = () => {
@@ -12,7 +14,7 @@ const AboutPage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-[68px]">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mt-[48px]">
         <div className="absolute inset-0">
           <img 
             src={teamImage} 
@@ -35,6 +37,8 @@ const AboutPage = () => {
       <About />
       <Stats />
       <VisionMission />
+      <Timeline />
+      <Achievements />
       <Values />
       
       <Footer />
