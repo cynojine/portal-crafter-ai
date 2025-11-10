@@ -55,7 +55,7 @@ const Navigation = () => {
         className="fixed top-0 left-0 right-0 z-50 bg-background shadow-sm border-b"
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-[48px]">
+          <div className="flex items-center justify-between h-[58px]">
             <button
               onClick={scrollToTop}
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
@@ -103,7 +103,7 @@ const Navigation = () => {
             className="fixed inset-0 bg-background/80 backdrop-blur-sm"
             onClick={() => setIsMobileMenuOpen(false)}
           />
-          <div className="fixed top-16 left-0 right-0 bg-background border-b shadow-lg">
+          <div className="fixed top-[58px] left-0 right-0 bg-background border-b shadow-lg">
             <div className="container mx-auto px-4 py-4 flex flex-col gap-2">
               {navItems.map((item) => (
                 <Button
